@@ -1,0 +1,64 @@
+<p>hello</p>
+<div class="container-fluid" xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/xhtml">
+  <h1>User registration form</h1>
+  <form #userForm="ngForm" (ngSubmit)="createUser()">
+    <div class="form-group">
+      <label>First Name</label>
+      <input type="text" class="from-control" [(ngModel)]="firstName" name="firstName">
+    </div>
+    <div class="form-group">
+      <label>last Name</label>
+      <input type="text" class="from-control" [(ngModel)]="lastName" name="lastName">
+    </div>
+    <div class="form-group">
+      <label>email</label>
+      <input type="email" class="from-control" [(ngModel)]="email" name="email">
+    </div>
+    <div class="form-group">
+      <label>phoneNumber</label>
+      <input type="tel" class="from-control" [(ngModel)]="phoneNumber" name="phoneNumber">
+    </div>
+    <div class="form-group">
+      <label>accountNumber</label>
+      <input type="Number" class="from-control" [(ngModel)]="accountNumber" name="accountNumber">
+    </div>
+
+    <div class="form-group">
+      <button class="btn btn-primary">Create user</button>
+    </div>
+  </form>
+</div>
+<br>
+<br>
+<br>
+<br>
+<h1> User List</h1>
+<table class="table" style="..">
+<thead class="table  header">
+  <th> first Name</th>
+  <th> Last Name</th>
+  <th> Email</th>
+  <th> phone Number</th>
+</thead>
+
+  <tbody>
+  <tr *ngFor="let user of users">
+    <td>{{user.firstName}}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.lastName}}</td>
+    <td>{{user.phoneNumber}}</td>
+  </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<br>
+<input type="tel" class="form-control" [(ngModel)]="searchName" name="searchphoneNumber">
+<button (click)="searchUser()">Search</button>
+<br>
+<br>
+<div *ngif="result.phoneNumber!=0">
+  <table class="table">
+
+  </table>
+</div>

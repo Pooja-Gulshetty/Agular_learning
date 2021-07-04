@@ -1,0 +1,24 @@
+<h1>chef registeration form</h1>
+<form #chefForm="ngForm" (ngSubmit)="creatChef()">
+  <div class="form-group">
+    <label>First Name</label>
+    <input type="text" class="form-control" [(ngModel)]="firstName" name="firstName">
+  </div>
+  <div class="form-group">
+    <label>lastName</label>
+    <input type="text" class="form-control" [(ngModel)]="lastName" name="lastName">
+  </div>
+  <div class="form-group">
+    <label>email</label>
+    <input type="email" class="form-control" [(ngModel)]="email" name="email">
+  </div>
+  <div class="form-group">
+    <label>phoneNumber</label>
+    <input type="number" class="form-control" [(ngModel)]="phoneNumber"name="phoneNumber">
+  </div>
+  <div class="form-group">
+    <label>accountNumber</label>
+    <input type="number" class="form-control" [(ngModel)]="accountnumber" name="accountNumber">
+  </div>
+</form>
+

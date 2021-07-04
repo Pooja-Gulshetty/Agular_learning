@@ -1,0 +1,55 @@
+<div class="container-fluid">
+  <h1>employee registeration form</h1>
+  <form #employeeForm="ngForm" (ngSubmit)="createEmployee()">
+    <div class="form-group">
+      <label>First Name</label>
+      <input type="text" class="form-control" [(ngModel)]="firstName" name="firstName">
+    </div>
+    <div class="form-group">
+      <label>Last Name</label>
+      <input type="text" class="form-control" [(ngModel)]="lastName" name="lastName">
+    </div>
+    <div class="form-group">
+      <label>email</label>
+      <input type="email" class="form-control" [(ngModel)]="email" name="email">
+    </div>
+    <div class="form-group">
+      <label>phoneNumber</label>
+      <input type="number" class="form-control" [(ngModel)]="phoneNumber" name="phoneNumber">
+    </div>
+    <div class="form-group">
+      <label>accountNumber</label>
+      <input type="number" class="form-control" [(ngModel)]="accountNumber" name="accountNumber">
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</div>
+
+<br>
+<br>
+<br>
+
+<h1>Employees list</h1>
+<table class="table" style="width: 59%; background-color: aquamarine;">
+  <thead class="table header">
+  <th> firstName</th>
+  <th> LastName</th>
+  <th>phoneNumber</th>
+  <th>AccountNumber</th>
+  <th>Email</th>
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let employee of employees">
+    <td>{{employee.firstName}}</td>
+    <td>{{employee.lastName}}</td>
+    <td>{{employee.phone}}</td>
+    <td>{{employee.account}}</td>
+    <td>{{employee.email}}</td>
+  </tr>
+  </tbody>
+</table>
+
+

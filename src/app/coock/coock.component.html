@@ -1,0 +1,114 @@
+<div class="container-fluid" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+  <h1>Coock registration form</h1>
+  <form #coockForm="ngForm" (ngSubmit)="createCoock()">
+    <div class="form-group">
+      <label>First Name</label>
+      <input type="text" class="form-control" [(ngModel)]="firstName" name="firstName">
+    </div>
+
+    <div class="form-group">
+      <label>Last Name</label>
+      <input type="text" class="form-control" [(ngModel)]="lastName" name="lastName">
+    </div>
+
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" class="form-control" [(ngModel)]="email" name="email">
+    </div>
+
+    <div class="form-group">
+      <label>Phone Number</label>
+      <input type="number" class="form-control" [(ngModel)]="phoneNumber" name="phoneNumber">
+    </div>
+
+    <div class="form-group">
+      <button class="btn btn-primary">Create cook</button>
+    </div>
+  </form>
+</div>
+<br>
+<br>
+<br>
+<h1>Cooks List</h1>
+<table class="table" style="..">
+  <thead class="table header">
+  <th> first Name</th>
+  <th> last Name</th>
+  <th> Email</th>
+  <th> phone Number</th>
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let coock of coocks">
+    <td>{{coock.firstName}}</td>
+    <td>{{coock.email}}</td>
+    <td>{{coock.lastName}}</td>
+    <td>{{coock.phone}}</td>
+  </tr>
+  </tbody>
+</table>
+
+<br>
+<br>
+<br>
+<br>
+<input type="tel" class="form-control" [(ngModel)]="searchPhoneNumber" name="phoneNumber">
+<button (click)="searchCoock()">Search</button>
+<br>
+<br>
+
+<div *ngIf="result.phone != 0">
+  <table class="table" style="..">
+    <thead class="table header">
+    <th> first Name</th>
+    <th> last Name</th>
+    <th> Email</th>
+    <th> phone Number</th>
+    </thead>
+
+    <tbody>
+    <tr>
+      <td>{{result.firstName}}</td>
+      <td>{{result.lastName}}</td>
+      <td>{{result.email}}</td>
+      <td>{{result.phone}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+<br>
+<br>
+<input type="email" class="form-control" [(ngModel)]="findcoockforGivenemail" name="email">
+<button (click)="findcoockforGivenemail()">Search</button>
+
+
+<div *ngIf="values.email!=0">
+  <table class="table" style="..">
+    <thead class="table header">
+    <th>first Name</th>
+    <th>last Name</th>
+    <th>email</th>
+    <th>phone Number</th>
+
+    </thead>
+    <tbody>
+    <tr>
+      <td>{{values.firstName}}</td>
+      <td>{{values.lastName}}</td>
+      <td>{{values.email}}</td>
+      <td>{{values.phone}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+
+
+
+
+"
